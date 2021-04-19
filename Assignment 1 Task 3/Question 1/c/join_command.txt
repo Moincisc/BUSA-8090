@@ -1,0 +1,5 @@
+sort -k 1b,1 expression.tab > expression_sorted.tab
+
+sort -k 1b,1 annotation.tab > annotation_sorted.tab
+
+join -o 1.1,1.2,2.2,1.3 annotation_sorted.tab expression_sorted.tab > joined.tab
