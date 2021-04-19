@@ -1,0 +1,1 @@
+select LastName,FirstName,MemberID from `member` where YEAR(JoinDate) = 2013;
