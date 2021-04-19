@@ -1,0 +1,1 @@
+select m.MemberID,m.LastName,m.FirstName from `member` m inner join entry e on m.MemberID = e.MemberID where not exists (select * from entry where e.MemberID = MemberID and `Year`=2013);
