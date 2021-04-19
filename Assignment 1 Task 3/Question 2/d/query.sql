@@ -1,0 +1,1 @@
+select m.LastName,m.FirstName,m.MemberID from `member` as m inner join entry e on m.MemberID = e. MemberID group by m.MemberID having count(distinct(e.`Year`)) = (Select count(distinct(y.`Year`)) from `member` x inner join entry y on  x.MemberID = y.MemberID where x.Team = m.Team);
